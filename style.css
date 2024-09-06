@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0 auto;
     box-sizing: border-box;
@@ -6,7 +6,7 @@
     color: white;
 }
 
-body{
+body {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -16,32 +16,78 @@ body{
     justify-items: center;
     background-color: #0831EB;
 }
-main{
+
+main {
+    position: static;
     width: 90vw;
-    height: 90vh;
+    height: 100%;
+    margin-top: 40px; /* Permitindo altura mínima, mas sem limitar a altura máxima */
+    margin-bottom: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     align-content: center;
-    justify-items: center;
     background-color: #225CBF;
+    padding: 20px;
 }
-main h1{
+
+
+#title {
     background-color: #1E6B97;
-    padding:20px;
+    padding: 20px;
     color: white;
     border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
 }
-main > div{
+#title img{
+ max-height: 100px;
+}
+
+main>div {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-main > div > p {
+
+main>div>p {
     font-weight: bold;
     font-size: 1.3rem;
+    word-wrap: break-word; /* Quebra palavras grandes em várias linhas */
 }
-footer{
+#img-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+#img-div img {
+    display: flex;
+    max-width: 200px; /* Garantir que as imagens não ultrapassem o contêiner */
+    max-height: 200px;
+}
+/* CSS media query dentro de um stylesheet */
+footer {
     font-size: 0.6rem;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 510px) {
+    #img-div {
+        flex-direction: column;
+    }
+    #img-div img{
+        height: 130px;
+    }
+    footer {
+        font-size: 0.5rem;
+    }
 }
